@@ -1,0 +1,6 @@
+module Pods_whernat {
+  umbrella header "Pods-whernat-umbrella.h"
+
+  export *
+  module * { export * }
+}
