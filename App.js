@@ -47,9 +47,9 @@ export default App = () => {
       let userToken;
       try {
         //alert("aa")
-        // AsyncStorage.clear();
+       //  AsyncStorage.clear();
         userToken = await AsyncStorage.getItem('userToken');
-        alert(userToken);
+      //  alert(userToken);
       } catch (e) {
         // Restoring token failed
       }

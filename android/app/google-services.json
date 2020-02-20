@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "783963087474",
+    "firebase_url": "https://wherewhenwhat-0715.firebaseio.com",
+    "project_id": "wherewhenwhat-0715",
+    "storage_bucket": "wherewhenwhat-0715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783963087474:android:3235cce569d87e770b18eb",
+        "android_client_info": {
+          "package_name": "com.whernat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783963087474-dthlef020p506f9k18eb3mfeqmb1fcrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl01ARX-bzMXqNkNV8CGcOXZC0LqhNLY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783963087474-dthlef020p506f9k18eb3mfeqmb1fcrg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783963087474-svj86mgi13bvbm48jbkm4tnd4u2nomv8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sict.whernat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

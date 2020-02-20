@@ -6,7 +6,7 @@ import isIOS from "../../utils/isIOS";
 class Touchable extends React.Component {
 
     renderRegular(){
-        const { onPress, onPressIn, onLongPress, children } = this.props;
+        const { onPress, onPressIn, onLongPress, children, disabled } = this.props;
         const style = {
             ...this.props.style
         };
@@ -17,6 +17,7 @@ class Touchable extends React.Component {
                 onPressIn={ () => onPressIn() }
                 onLongPress={ () => onLongPress() }
                 activeOpacity={0.3}
+                disabled= {disabled}
             >
                 { children }
             </TouchableOpacity>

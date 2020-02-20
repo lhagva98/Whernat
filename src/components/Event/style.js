@@ -9,7 +9,6 @@ export default {
     EventImage:{
         resizeMode: 'contain' ,
         width:'100%',
-        resizeMode: 'contain' 
     },
    
     time:{
