@@ -1,6 +1,6 @@
-export default{
-    eventContainer: {
-        padding:20,
-        backgroundColor:'white'
-    },
-}
+export default {
+  eventContainer: {
+    padding: 20,
+    backgroundColor: 'white',
+  },
+};

@@ -9,8 +9,7 @@ function wait(timeout) {
     setTimeout(resolve, timeout);
   });
 }
-
-const FeaturedEvents = ({ navigation }) => {
+const EventList = ({ navigation }) => {
   const [refreshing, setRefreshing] = React.useState(false);
   const [featured, setFeatured] = React.useState(null);
   const onRefresh = React.useCallback(() => {
@@ -45,4 +44,4 @@ const FeaturedEvents = ({ navigation }) => {
   );
 };
 
-export default FeaturedEvents;
+export default EventList;
