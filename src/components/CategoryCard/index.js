@@ -18,9 +18,10 @@ const Card = ({ name, count, interested, clicked }) => (
           style={{ position: "absolute", right: 10, top: 10 }}
         />
       )}
-
+    </View>
+    <View style={styles.footer}>
       <Text style={styles.category}>{name}</Text>
-      <Text style={styles.count}>{count} items in store</Text>
+      <Text style={styles.count}>[{count}]</Text>
     </View>
   </TouchAble>
 );

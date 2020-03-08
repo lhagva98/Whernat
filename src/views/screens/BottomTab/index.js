@@ -8,13 +8,13 @@ const Tab = createBottomTabNavigator();
 const MainTab = () => (
   <Tab.Navigator
     tabBarOptions={{
-      labelPosition: "below-icon",
-      activeTintColor: "green",
+      activeTintColor: "#ff3333",
       // inactiveTintColor:'black',
       labelStyle: {
         fontSize: 18,
         color: "black"
-      }
+      },
+      showLabel: false
     }}
   >
     <Tab.Screen
@@ -23,7 +23,7 @@ const MainTab = () => (
       options={{
         tabBarLabel: "Home",
         tabBarIcon: ({ color, size }) => (
-          <Icon name="bell" color={color} size={size} />
+          <Icon name="home" color={color} size={size} />
         )
       }}
     />
@@ -33,7 +33,7 @@ const MainTab = () => (
       options={{
         tabBarLabel: "Events",
         tabBarIcon: ({ color, size }) => (
-          <Icon name="bell" color={color} size={size} />
+          <Icon name="search" color={color} size={size} />
         )
       }}
     />
@@ -43,7 +43,7 @@ const MainTab = () => (
       options={{
         tabBarLabel: "My Events",
         tabBarIcon: ({ color, size }) => (
-          <Icon name="bell" color={color} size={size} />
+          <Icon name="user" color={color} size={size} />
         )
       }}
     />
