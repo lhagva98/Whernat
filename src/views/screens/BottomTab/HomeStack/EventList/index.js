@@ -9,7 +9,7 @@ function wait(timeout) {
     setTimeout(resolve, timeout);
   });
 }
-const EventList = ({ navigation }) => {
+const EventList = ({ navigation, route }) => {
   const [refreshing, setRefreshing] = React.useState(false);
   const [featured, setFeatured] = React.useState(null);
   const onRefresh = React.useCallback(() => {
@@ -18,18 +18,7 @@ const EventList = ({ navigation }) => {
   }, [refreshing]);
 
   React.useEffect(() => {
-    const getData = async () => {
-      let featuredEvents = [];
-      let myInterested = [];
-      let snapshot = await db.collection("Events").get();
-      snapshot.forEach(doc => {
-        const eventItem = doc.data();
-        eventItem.id = doc.id;
-        featuredEvents.push(eventItem);
-      });
-      setFeatured(featuredEvents);
-    };
-    getData();
+    setFeatured(route.params.events.content);
   }, []);
   return (
     <FlatList

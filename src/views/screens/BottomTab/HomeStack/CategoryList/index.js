@@ -17,28 +17,14 @@ const CategoryList = ({ route, navigation }) => {
     setRefreshing(true);
     wait(2000).then(() => setRefreshing(false));
   }, [refreshing]);
-  const [list] = useState([
-    {
-      name: "Математик",
-      id: 1,
-      count: 1
-    },
-    {
-      name: "Математик",
-      id: 2,
-      count: 2
-    },
-    {
-      name: "Математик",
-      id: 3,
-      count: 3
-    }
-  ]);
-
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    setList(route.params.list.content);
+  }, []);
   useEffect(() => {}, [input]);
 
-  const navigateToEvents = catId => {
-    navigation.navigate("EventList");
+  const navigateToEvents = index => {
+    navigation.navigate("EventList", { events: list[index] });
   };
 
   return (
@@ -51,11 +37,12 @@ const CategoryList = ({ route, navigation }) => {
         }
         contentContainerStyle={styles.list}
         data={list}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <CategoryItem
-            key={item.id}
-            data={item}
-            clicked={() => navigateToEvents(item.id)}
+            key={index}
+            count={item.content.length}
+            info={item.info}
+            clicked={() => navigateToEvents(index)}
           />
         )}
         keyExtractor={item => item.id}
