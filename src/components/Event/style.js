@@ -18,7 +18,7 @@ export default {
   },
   EventImage: {
     resizeMode: "contain",
-    width: "100%"
+    height: 80
   },
 
   time: {},

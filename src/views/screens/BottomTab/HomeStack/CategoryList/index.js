@@ -19,6 +19,7 @@ const CategoryList = ({ route, navigation }) => {
   }, [refreshing]);
   const [list, setList] = useState([]);
   useEffect(() => {
+    navigation.setOptions({ title: route.params.type });
     setList(route.params.list.content);
   }, []);
   useEffect(() => {}, [input]);

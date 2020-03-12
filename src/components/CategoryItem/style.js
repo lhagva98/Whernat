@@ -11,5 +11,9 @@ export default {
   name: {
     fontSize: 15,
     marginLeft: 15
+  },
+  image: {
+    width: "20%",
+    height: 100
   }
 };

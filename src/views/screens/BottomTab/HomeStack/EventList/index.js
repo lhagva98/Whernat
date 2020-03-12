@@ -18,6 +18,7 @@ const EventList = ({ navigation, route }) => {
   }, [refreshing]);
 
   React.useEffect(() => {
+    navigation.setOptions({ title: route.params.events.info.name });
     setFeatured(route.params.events.content);
   }, []);
   return (
