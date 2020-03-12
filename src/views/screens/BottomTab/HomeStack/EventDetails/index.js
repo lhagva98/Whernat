@@ -25,11 +25,16 @@ const EventDetails = ({ navigation, route }) => {
     <ScrollView style={styles.container}>
       <EventImage isInterested={true} source={img} />
       <View style={{ padding: 10 }}>
-        <BannerInfo />
+        <BannerInfo
+          logo={route.params.data.logoPath}
+          name={route.params.data.name}
+          startTime={route.params.data.startTime}
+        />
         <DetailMap
           navigation={navigation}
           location={route.params.data.location}
           coordinate={route.params.data.coordinate}
+          locationInfo={route.params.data.locationInfo}
         />
       </View>
       <JoinUs navigation={navigation} eventId={"F3jiX6uMASzyCXLLVY69"} />
